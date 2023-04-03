@@ -8,9 +8,9 @@ let id = 1;
 function App() {
   const [books, setBooks] = useState([]);
 
-  const createBook = (book) => {
-    const bookObj = {title: book, id: id};
-    setBooks([...books, bookObj]);
+  const createBook = (title) => {
+    const newBook = {title: title, id: id};
+    setBooks([...books, newBook]);
     id++;
   }
 
@@ -24,8 +24,8 @@ function App() {
 
   return (
     <div>
+      <BookCreate onCreate={createBook}/>
       <BookList books={books}/>
-      <BookCreate createBook={createBook}/>
     </div>
   );
 }
