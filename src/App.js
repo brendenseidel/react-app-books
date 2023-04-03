@@ -2,16 +2,12 @@ import BookCreate from "./components/BookCreate";
 import BookList from "./components/BookList";
 import { useState } from "react";
 
-let id = 1;
-
-
 function App() {
   const [books, setBooks] = useState([]);
 
   const createBook = (title) => {
-    const newBook = {title: title, id: id};
-    setBooks([...books, newBook]);
-    id++;
+    const id = Math.round(Math.random() * 99999);
+    setBooks([...books, {id , title}]);
   }
 
   // const editBook = (book) => {
