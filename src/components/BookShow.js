@@ -1,7 +1,7 @@
-function BookShow() {
+function BookShow({book}) {
   return (
     <div>
-      BookShow
+      Book: {book.title}
     </div>
   );
 }
