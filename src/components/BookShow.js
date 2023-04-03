@@ -10,7 +10,7 @@ function BookShow({ book, onBookDelete, onEdit }) {
 
   const handleEditClick = () => {
     setShowEdit(true)
-  }
+  };
 
   const handleSubmit = (id, title) => {
     setShowEdit(false);
